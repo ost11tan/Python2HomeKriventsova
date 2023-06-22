@@ -27,7 +27,7 @@ def read_num():
     if str_num[0].isdigit():
         a=int(str_num[0])
     else:
-        print("Вы точно ввели чило?")
+        print("Вы точно ввели число?")
         read_num()
 
     if str_num[1].isdigit() and int(str_num[1])!=0:
@@ -36,7 +36,7 @@ def read_num():
         print("Деление на ноль!!!")
         read_num()
     else:
-        print("Вы точно ввели чило?")
+        print("Вы точно ввели число?")
         read_num()
 
     return str_num #изначально строка выглядела как return a/b
