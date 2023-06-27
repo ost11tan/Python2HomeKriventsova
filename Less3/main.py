@@ -12,6 +12,8 @@ if task==1:
 elif task==2:
     task2.main()
 elif task==3:
+    task3.main()
+elif task==4:
     task3.function()
 else:
     print("Такого задания нет")
