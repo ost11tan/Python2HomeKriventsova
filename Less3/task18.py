@@ -11,4 +11,30 @@
 
 
 def main():
-    return q
+   FRIENDS=3
+   backpack={'Илья': ('сумка', 'игра','cпрайт'), 'Андрей': ('сумка', 'ложка', 'вилка'), 'сергей': ('сумка', 'карандаш')}
+   print(backpack)
+
+   print(f"Имена: {set(backpack)}")
+   print(f"Список всех вещей : {set(backpack.values())}")
+
+   print(f"Список всех вещей : {set(backpack.keys())}")
+
+   print("список вещей в количестве 1")
+
+
+#  for i in range(FRIENDS):
+#       key = input('введите имя друга: ')
+#       value = tuple(things())
+#       backpack[key] = value
+
+#   print(backpack)
+   
+
+#def things():
+#    n=int(input("Введите количество вещей для этого друга:"))
+#    list_of_things=[]
+#    for i in range (n):
+#        list_of_things.append(input(f"{i+1}:"))
+#    return list_of_things
+main()
