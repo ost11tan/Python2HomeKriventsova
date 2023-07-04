@@ -2,7 +2,7 @@
  Функция возвращает кортеж из трёх элементов: путь, имя файла, расширение файла."""
 
 
-def way(str_imput):
+def way(str_imput:str)->tuple:
     path=str_imput.split("\\")
     name=str_imput.split("\\")[-1]
     path.pop()
