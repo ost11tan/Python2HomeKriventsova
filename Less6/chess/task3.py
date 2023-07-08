@@ -34,26 +34,26 @@ def chess(arr:list):
     list_x=[*[item[0] for item in arr]]
     list_y = [*[item[1] for item in arr]]
     if ort(list_x)==1 and ort(list_y)==1 and diagonal(list_x, list_y)==1:
-                print("не бьет")
+                return True
     else:
-        print("бьет")
+        return False
 
 
 
 
 def ort(arr:list)->bool:
     flag=1
-    for i in range(COLOMN):
+    for i in range(len(arr)):
         temp=arr[i]
-        for j in range(i + 1, COLOMN):
+        for j in range(i + 1, len(arr)):
             if arr[j]==temp:
                 flag=0
                 return flag
     return flag
 def diagonal(arr_x:list,arr_y:list)->bool:
     flag=1
-    for i in range(COLOMN):
-        for j in range(i + 1, COLOMN):
+    for i in range(len(arr_x)):
+        for j in range(i + 1, len(arr_x)):
             if abs(arr_x[i] - arr_x[j]) == abs(arr_y[i] - arr_y[j]):
                 flag=0
                 return flag
