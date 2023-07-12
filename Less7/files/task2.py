@@ -39,6 +39,6 @@ if __name__=="__main__":
     diapazon=input("Введите диапазон через запятую:").split(",")
     extension = input("Введите расширение исходного файла: ")
     extension_new = input("Введите расширение конечного файла: ")
-    print(diapazon)
+    #print(diapazon)
     
     rename_group(amount,number,extension,extension_new,diapazon)
