@@ -10,7 +10,7 @@
 import json
 import csv
 
-def func(csv_file,json_file):
+def func(csv_file,json_file)->None:
     with (open(csv_file, "r", encoding="UTF-8") as csv_f):
         csv_file = [*csv.reader(csv_f)]
         key_id,key_level,key_name=csv_file[0]

@@ -7,7 +7,7 @@
 import pickle
 import csv
 
-def print_pikle(file):
+def print_pikle(file)->None:
 
     with (open(file, "r", encoding="UTF-8") as csv_f):
         csv_file = [*csv.reader(csv_f)]

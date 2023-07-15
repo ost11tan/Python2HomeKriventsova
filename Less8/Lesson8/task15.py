@@ -6,7 +6,7 @@ import os
 import json
 import pickle
 
-def func (dir):
+def func (dir)->None:
     json_files = [i for i in os.listdir(dir) if i.endswith('.json')]
     for json_file in json_files:
         with (open(os.path.join(dir, json_file), "r", encoding="UTF-8") as f,

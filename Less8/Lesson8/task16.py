@@ -10,7 +10,7 @@
 
 import pickle
 import csv
-def to_csv(file_p):
+def to_csv(file_p)->None:
     with (open(file_p, 'rb') as f_pi,
           open("itog.csv", "w", newline='', encoding='utf-8', ) as f_csv,):
         picl_load = (pickle.load(f_pi))
