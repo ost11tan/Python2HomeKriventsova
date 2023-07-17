@@ -21,21 +21,23 @@ def random_in_csv() -> None:
             coefficients = [random.uniform(MIN, MAX) for i in range(3)]
             csv_write.writerow(coefficients)
 
-def print_json(func:Callable):
-    file_name="res.json"
+
+def print_json(func: Callable):
+    file_name = "res.json"
     if os.path.exists(file_name):
-        with open(file_name,'r',encoding="UTF-8")as f:
-            data=json.load(f)
+        with open(file_name, 'r', encoding="UTF-8") as f:
+            data = json.load(f)
     else:
-        data=[]
-    def wrapper (*args,**kwargs):
-        dict_json={'args':args,**kwargs}
-        result=func(*args,**kwargs)
-        dict_json['result']=result
+        data = []
+
+    def wrapper(*args, **kwargs):
+        dict_json = {'args': args, **kwargs}
+        result = func(*args, **kwargs)
+        dict_json['result'] = result
         data.append(dict_json)
 
-        with open(file_name,'w',encoding="UTF-8")as f1:
-            json.dump(data,f1)
+        with open(file_name, 'w', encoding="UTF-8") as f1:
+            json.dump(data, f1)
 
     return wrapper
 
@@ -46,7 +48,7 @@ def equation(func: Callable):
             reader = csv.reader(file)
             for coefficients in reader:
                 if not coefficients == []:
-                    #Вопрос!!! что я сделала не так,чт опри генерации строка пустая чередуется со строкой с данными
+                    # Вопрос!!! что я сделала не так,чт опри генерации строка пустая чередуется со строкой с данными
                     a, b, c = map(float, coefficients)
                     result = func(a, b, c)
                     print(f"Уравнение: {a}x\u00B2 + {b}x + {c} = 0")
@@ -54,7 +56,6 @@ def equation(func: Callable):
                     print()
 
     return wrapper
-
 
 
 @equation
