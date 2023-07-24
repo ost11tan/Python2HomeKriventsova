@@ -43,7 +43,6 @@ class Matrix:
         if not (len(self.matrix[0]) == len(other.matrix)):
             return f"Матрицы нельзя перемножить!"
         else:
-            k = len(other.matrix[0])
             result = [[0 for _ in range(len(other.matrix[0]))] for _ in range(len(self.matrix))]
             for row in range(len(self.matrix)):
                 for elem in range(len(other.matrix[0])):
