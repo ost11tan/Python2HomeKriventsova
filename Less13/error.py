@@ -16,3 +16,12 @@ class UserValueError(UserException):
         elif int(self.value) > self.COLOMN:
             text =f"Значение {self.value} должно быть <= {self.COLOMN} "
         return text
+
+
+class UserFibError(UserException):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return f"Введенное значение {self.value} не является целым положительным числом"
+
+
